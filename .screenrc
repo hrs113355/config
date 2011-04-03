@@ -1,0 +1,4 @@
+caption always "%{= bk} %{= bW} [%n]%t @ %H %{-} %= %{= bR} %l %{-} | %{= KG} %Y-%m-%d %{-} "
+hardstatus alwayslastline " %-Lw%{= Bw}%n%f %t%{-}%+Lw %=| %{= KR} %0c:%s "
+shelltitle '} | tcsh'
+vbell off

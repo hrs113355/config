@@ -71,15 +71,29 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 plugins=(
   git
   bundler
-  osx
+  macos
   rake
   rbenv
   ruby
 )
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir dir_writable vcs)
+function custom_kubecontext() {
+    local context=$(kubectl config current-context 2>/dev/null)
+    if [[ -n $context ]]; then
+        local parsed_context=$(echo $context | awk -F'/' '{print $2}')
+        echo "⎈" $parsed_context
+    else
+        echo "N/A"
+    fi
+}
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir dir_writable vcs custom_kubecontext)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator load battery history background_jobs time)
 POWERLEVEL9K_MODE='nerdfont-complete'
+POWERLEVEL9K_CUSTOM_KUBECONTEXT=custom_kubecontext
+POWERLEVEL9K_CUSTOM_KUBECONTEXT_BACKGROUND='magenta'
+POWERLEVEL9K_CUSTOM_KUBECONTEXT_FOREGROUND='white'
+
 ZSH_DISABLE_COMPFIX=true
 
 source $ZSH/oh-my-zsh.sh
@@ -126,3 +140,6 @@ eval "$(pyenv init -)"
 export PATH="/usr/local/opt/mysql-client@5.7/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/mysql-client@5.7/lib"
 export CPPFLAGS="-I/usr/local/opt/mysql-client@5.7/include"
+
+alias vim=nvim
+alias k=kubectl

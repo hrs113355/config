@@ -7,4 +7,4 @@ https://brew.sh
 https://ohmyz.sh/
 
 ## vim-plug
-https://ohmyz.sh/
+https://github.com/junegunn/vim-plug?tab=readme-ov-file#neovim

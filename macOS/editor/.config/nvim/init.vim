@@ -21,3 +21,9 @@ filetype plugin indent on
 set noswapfile
 set backspace=2
 set colorcolumn=120
+set mouse=
+
+set clipboard+=unnamedplus
+
+" 使用 pbcopy 作為複製命令
+vmap <C-c> "+y

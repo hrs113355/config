@@ -1,0 +1,10 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+name = Molecule
+email = hrs113355@gmail.com
+	signingkey = B647BE2FDA83E3967509A056BF81020ECC46C760
+[core]
+  quotePath = false
+[commit]
+	gpgsign = true

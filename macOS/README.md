@@ -40,3 +40,23 @@ tools/       - Brewfile
 8. Import iTerm2 settings from `terminal/iterm2-settings.plist`
 9. Install fonts from `fonts/`
 10. Restore `~/.ssh/config` and GPG keys from separate credentials backup
+
+## Apps Not in Brewfile
+
+| App | 備註 |
+|-----|------|
+| 1Password | 密碼管理 |
+| Antigravity | AI agent IDE |
+| Claude | Anthropic |
+| Google Chrome | 瀏覽器 |
+| LINE | 通訊 |
+| Microsoft Edge | 瀏覽器 |
+| Nally | BBS 客戶端 |
+| OpenVPN Connect | VPN |
+| Postman | API 測試 |
+| Slack | 通訊 |
+| Spotify | 音樂 |
+| The Unarchiver | 解壓縮 |
+| Tunnelblick | VPN |
+| VLC | 播放器 |
+| iTerm | 終端機 |

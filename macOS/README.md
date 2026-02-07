@@ -16,8 +16,10 @@ tools/       - Brewfile
 
 ## Runtime Versions
 
-- **Node.js** (nvm): default = `lts/iron` (v20.19.5)
-- **SDKMAN**: installed (check `sdk list` for versions)
+- **Node.js** (nvm)
+- **Python** (pyenv)
+- **Java** (SDKMAN): 用 `sdk install java` 安裝，不要手動裝
+- **npm globals**: `claude-code`, `codex`, `yarn`, `uipro-cli`
 - **Oh My Zsh**: plugins = (git), theme = powerlevel10k
 
 ## Manual Installation
@@ -32,7 +34,7 @@ tools/       - Brewfile
 
 1. Install Homebrew, then `brew bundle --file=tools/Brewfile`
 2. Install Oh My Zsh
-3. Install nvm, then `nvm install lts/iron && nvm alias default lts/iron`
+3. Install nvm
 4. Install SDKMAN
 5. Copy shell files to `~/`
 6. Copy git files: `.gitconfig` to `~/`, `.config-git-ignore` to `~/.config/git/ignore`
